@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  color: #fff;
+}
+
+#container {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: white; 
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-size: 4vw;
+}
+
+label,
+.message{
+  font-size: 18px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.panel {
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  margin: 15px;
+  width: 100%; /* Ensure the panel takes full width */
+  max-width: 600px; /* Optional: limit the maximum width */
+}
+
+.panel input,
+.panel textarea {
+  border: none;
+  border-radius: 3px;
+  display: block;
+  font-size: 16px;
+  padding: 8px 10px;
+  margin: 15px 0;
+  width: 100%;
+}
+
+.panel textarea {
+  resize: none; /* Prevent resizing */
+}
+
+/*Selecting and Input Fields */
+.panel select {
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 8px 10px;
+  margin: 15px 0;
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  position: relative;
+  margin: 10px 10px; /* Space between buttons */
+  width: 100px; /* Smaller width */
+  height: 40px; /* Smaller height */
+  border: 1px solid white;
+  background: none;
+  color: #ccc;
+  font-size: 16px; /* Adjust font size for smaller buttons */
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: 0.6s;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  filter: blur(30px);
+  transform: translateX(-130px) skewX(-15deg);
+  transition: transform 0.7s, opacity 0.7s;
+}
+
+.button:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blur(30px);
+  transform: translateX(-100px) skewX(-15deg);
+  transition: transform 0.7s, opacity 0.7s;
+}
+
+.button:hover {
+  background: #537895;
+}
+
+.button:hover:before {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+}
+
+.button:hover:after {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+}
+
+
+/* Styling for Result Panel */
+.result-panel textarea {
+  border: none;
+  border-radius: 3px;
+  display: block;
+  font-size: 16px;
+  padding: 8px 10px;
+  margin: 15px 0;
+  width: 100%;
+}
+
+
+@media (max-width: 600px) {
+  h3 {
+    font-size: 14px;
+    margin: 15px 0px 0px;
+  }
+}
+

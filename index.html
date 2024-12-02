@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caesar Cipher</title>
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Caesar Cipher</h1>
+    <div class="panel">
+      <div class="message">Message:</div>
+      <textarea id="inputText" rows="4" placeholder="Type your message here..."></textarea>
+      <label>Shift:</label>
+      <div class="row">
+        <select name="shifts" id="shift">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">20</option>
+          <option value="22">20</option>
+          <option value="23">20</option>
+          <option value="24">20</option>
+          <option value="25">20</option>
+          
+        </select>
+      </div>
+      <!-- Result Panel -->
+    <div class="result-panel">
+      <div class="message">Result:</div>
+      <textarea id="resultText" readonly></textarea>
+    </div>
+
+    <div class="button-container">    
+      <button class="button" onclick="processText(false)">Encrypt</button>
+      <button class="button" onclick="processText(true)">Decrypt</button>
+      <button class="button" id="clipboard">Copy</button>
+      <button class="button" onclick="clearInput()">Clear</button>
+    </div>
+
+    </div>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+</html>
